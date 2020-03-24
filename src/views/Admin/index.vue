@@ -1,6 +1,6 @@
 <template>
     <el-container>
-        <el-header>喵喵网管理后台 ，欢迎：{{ $store.state.user.name }}</el-header>
+        <el-header>乐淘网管理后台 ，欢迎：{{ $store.state.user.name }}</el-header>
         <el-container>
             <el-aside width="200px">
                 <el-menu default-active="1">

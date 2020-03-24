@@ -44,7 +44,7 @@ export default {
             movieList : [],
             pullDownMsg : '',
             isLoading : true,
-            prevCityId : -1
+            prevCityId : -1,
         }
     },
     activated(){

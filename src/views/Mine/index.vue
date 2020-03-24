@@ -1,6 +1,6 @@
 <template>
     <div id="main">
-        <Header title="我的喵喵" />
+        <Header title="我的乐淘" />
         <div id="content">
             <router-view />
         </div>

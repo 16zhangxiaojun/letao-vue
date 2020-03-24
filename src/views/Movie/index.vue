@@ -1,6 +1,6 @@
 <template>
     <div id="main">
-        <Header title="喵喵电影" />
+        <Header title="乐淘电影" />
             <div id="content">
                 <div class="movie_menu">
                     <router-link tag="div" to="/movie/city" class="city_name">
@@ -35,12 +35,6 @@ export default {
     components : {
         Header,
         TabBar
-    },
-    created(){
-         this.axios.get('/api3/he/freeweather?city=nanjing&appkey=8f2b869db0e816cd0f5a56c5461756ac').then((res)=>{
-                var code = res.data.code
-                console.log(code,"codecodecode")
-            })
     },
     mounted(){
 
