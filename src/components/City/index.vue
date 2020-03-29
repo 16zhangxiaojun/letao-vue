@@ -65,7 +65,6 @@ export default {
             cityList : [],
             hotList : [],
             isLoading : true,
-            now_weath:'',
         }
     },
     mounted(){
@@ -158,15 +157,16 @@ export default {
              this.axios.get('/api3/he/freeweather?city='+nm+'&appkey=8f2b869db0e816cd0f5a56c5461756ac').then((res)=>{
                 var code = res.data.code
                 if(code == 10000){
-                    this.now_weath = res.data.result.HeWeather5[0].now.cond.txt;
+                    var city_weath = res.data.result.HeWeather5[0].now.cond.txt;
+                    this.$store.commit('city/CITY_INFO',{ nm , id, city_weath});
+                    window.localStorage.setItem('nowNm',nm);
+                    window.localStorage.setItem('nowId',id);
+                    window.localStorage.setItem('city_weath',city_weath)
+                    this.$router.push('/movie/nowPlaying');
                 }
             })
-            var city_weath =this.now_weath
-            this.$store.commit('city/CITY_INFO',{ nm , id, city_weath});
-            window.localStorage.setItem('nowNm',nm);
-            window.localStorage.setItem('nowId',id);
-            window.localStorage.setItem('city_weath',city_weath)
-            this.$router.push('/movie/nowPlaying');
+            
+       
         }
     }
 }

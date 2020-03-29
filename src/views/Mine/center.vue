@@ -14,10 +14,19 @@
       <div class="avatar">
         <img :src="$store.state.user.userHead" alt />
         <div class="login">
-          {{$store.state.user.name}}
-          <a href="javascript:;" @touchstart="handleToLogout" style="color:skyblue">退出</a>
-        <div v-if="$store.state.user.isAdmin">用户身份：管理员 <a href="/admin" target="_blank" style="color:green">进入管理后台</a></div>
+          <div>
+            当前用户：{{$store.state.user.name}}
+            <a
+              href="javascript:;"
+              @touchstart="handleToLogout"
+              style="color:skyblue"
+            >退出</a>
+          </div>
 
+          <div v-if="$store.state.user.isAdmin">
+            用户身份：管理员
+            <a href="/admin" target="_blank" style="color:green">进入管理后台</a>
+          </div>
         </div>
       </div>
 
@@ -188,6 +197,12 @@ export default {
     }
     .login {
       font-size: 16px;
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      a{
+          text-decoration:none;
+      }
     }
   }
   .order {
