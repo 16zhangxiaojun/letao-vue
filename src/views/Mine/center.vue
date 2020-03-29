@@ -9,7 +9,7 @@
             <img class="userHead" :src="$store.state.user.userHead">
         </div>
   </div>-->
-  <div class="mz-center">
+  <div class="lt-center">
     <div class="main">
       <div class="avatar">
         <img :src="$store.state.user.userHead" alt />
@@ -155,7 +155,7 @@ export default {
 
 <style lang="scss" scoped>
 /* .userHead{ width:100px; height:100px; border-radius: 50%; overflow: hidden;} */
-.mz-center {
+.lt-center {
   height: 100%;
 }
 .main {
@@ -206,6 +206,9 @@ export default {
     -ms-flex-align: center;
     align-items: center;
     li {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       position: relative;
       -webkit-box-flex: 1;
       -ms-flex: 1;
