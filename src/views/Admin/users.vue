@@ -13,7 +13,7 @@
             </el-table-column>
             <el-table-column
             prop="date"
-            label="注册日期">
+            label="注册日期-">
             </el-table-column>
             <el-table-column
             prop="username"
